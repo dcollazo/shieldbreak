@@ -1,0 +1,24 @@
+<div class="hero">
+  <div class="hero-inner">
+    <a href="" class="hero-logo"><img src="http://shieldbreak.com/img/shieldbreak.png" alt=""></a>
+    <div class="hero-copy">
+    </div>
+    <%= button_to "Twitter", 'https://www.twitter.com/Shield_Break' %>
+  </div>
+</div>
+
+<script>
+  $(function() {
+    var menu = $('#navigation-menu');
+    var menuToggle = $('#js-mobile-menu');
+
+    $(menuToggle).on('click', function(e) {
+      e.preventDefault();
+      menu.slideToggle(function(){
+        if(menu.is(':hidden')) {
+          menu.removeAttr('style');
+        }
+      });
+    });
+  });
+</script>
